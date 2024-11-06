@@ -1,0 +1,18 @@
+# Projeto Caixa Eletronico
+
+Esta documentação segue as bibliotecas utilizadas e os comandos para instala-las
+
+Criando a API
+    npm init es6 --y
+
+Bibliotecas utilizadas:
+    express - framework de client http
+    cors - protocolo para permissão de cross script
+    postgres - biblioteca de conexão com banco de dados
+
+Instalando bibliotecas:
+    npm i express cors postgres
+
+Inicinado a API:
+    node --watch app.js
+
