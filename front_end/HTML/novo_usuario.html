@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="../CSS/novo_usuario.css">
+</head>
+<body>
+    <div id="root">
+        <form id="form-new" method="post">
+            <label for="nome">Nome</label>
+            <input 
+                type="text" 
+                name="nome" 
+                id="nome"
+                placeholder="Digite seu nome..."
+                minlength="5"
+                required
+            >
+            <label for="email">E-mail</label>
+            <input 
+                type="text" 
+                name="email" 
+                id="email"
+                placeholder="Digite seu email..."
+                pattern="^[^\s@]{1,}@[^@\s]{2,}\.[^\s@]{2,}$"
+                title="o e-mail deve conter @"
+                required
+            >
+            <label for="senha">Senha</label>
+            <input 
+                type="password" 
+                name="senha" 
+                id="senha"
+                placeholder="Digite sua senha..."
+                minlength="8"
+                maxlength="8"
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                title="A senha deve ter 8 caracteres, incluindo letras e numeros"
+                required
+            >
+            <label for="conf_senha">Confirme a senha</label>
+            <input 
+                type="password" 
+                name="conf_senha" 
+                id="conf_senha"
+                placeholder="Repita a senha..."
+                minlength="8"
+                maxlength="8"
+                required
+            >
+            <p id="msgErro" style="color: red;"></p>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script src="../JS/novo_usuario.js"></script>
+</body>
+</html>
