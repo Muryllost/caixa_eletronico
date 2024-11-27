@@ -1,0 +1,128 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-size: 62.5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#root{
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    background-color: #c1121f;
+}
+
+#saldo{
+    color: #fdf0d5;
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px black;
+}
+
+#logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    background-color: #fdf0d5;
+    border: none;
+    border-radius: 2rem;
+    -webkit-box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.75);
+}
+
+#logout-image{
+    color: #003049;
+}
+
+#profile{
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    -webkit-box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.75);
+}
+
+#profile-image{
+    width: 100%;
+}
+
+#content{
+    width: 100%;
+    min-height: 10rem;
+    max-height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #fdf0d5;
+}
+
+#history{
+    font-size: 1.5rem;
+}
+
+.action{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.action button{
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5rem;
+    background-color: #c1121f;
+    border: #c1121f solid 1px;
+    -webkit-box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.75);
+}
+
+.action button:hover{
+    background-color: #fdf0d5;
+    border: #c1121f solid 1px
+}
+
+.action img{
+    width: 30px;
+    height: 30px;
+    border-radius: 5rem;
+}
+
+.action p{
+    font-size: 1.5rem;
+}
