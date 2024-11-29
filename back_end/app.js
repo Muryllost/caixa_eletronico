@@ -13,11 +13,31 @@ app.get('/login/:usuario/:senha', async (req, res)=>{
     const consulta = await sql`select * from usuario where
     email = ${usuario} and senha = ${senha}`
 
+    console.log(consulta[0].id)
+
     if(consulta != null && consulta != '')
         return res.status(200).json(consulta);
     else
         return res.status(401).json('Usuario ou senha incorretos')
 });
+
+app.get('/transacoes/id', async (req, res)=>{
+    const { id } = req.params
+    const transacoes = await sql`select
+                                 t.id,
+                                 t.saldo_antigo,
+                                 t.tipo,
+                                 t.data_transacao
+                                 from transacao as t
+                                 left join conta as c
+                                 on t.id_conta = c.id
+                                 inner join usuario as u
+                                 on c.id_usuario = u.id
+                                 where u.id = ${id};`
+
+
+    return res.status(200).json(transacoes)
+})
 
 app.post('/usuario/novo', async(req, res)=>{
    
